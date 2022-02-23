@@ -1,0 +1,46 @@
+﻿@model Product
+
+<h1> Test </h1>
+<form class="row g-3" method="post" asp-controller="Products" asp-action="EntryData" id="contact">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="col-md-6">
+        <label asp-for="FoodName" class="form-label"></label>
+        <input asp-for="FoodName" type="text" class="form-control" id="inputEmail4" placeholder="...">
+        <span asp-validation-for="FoodName" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" type="text" class="form-control" placeholder="...">
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Quantity" class="form-label"></label>
+        <input asp-for="Quantity" type="number" class="form-control" id="inputEmail4" placeholder="...">
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" type="text" class="form-control" id="inputPassword4" placeholder="...">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="Type" class="form-label"></label>
+        <select asp-for="Type" type="text" class="form-control">
+            <option selected>...</option>
+            <option>Food</option>
+            <option>Drink</option>
+            <option>Dessert</option>
+        </select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary" onclick="teclear()">Enviar</button>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
