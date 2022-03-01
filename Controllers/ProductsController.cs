@@ -6,9 +6,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using DeliveryApp.Data;
 using DeliveryApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DeliveryApp.Controllers
 {
+    [Authorize]
     public class ProductsController : Controller
     {
         private ApplicationDbContext _context;

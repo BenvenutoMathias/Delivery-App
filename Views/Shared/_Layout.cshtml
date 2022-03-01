@@ -21,10 +21,10 @@
 
             <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
 
-
-            <a class="" asp-area="" asp-controller="Products" asp-action="Entry">Products</a>
-
-
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="" asp-area="" asp-controller="Products" asp-action="Entry">Products</a>
+            }
             <partial name="_LoginPartial" />
             <button class="" type="button">&equiv;</button>
 
