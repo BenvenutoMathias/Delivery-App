@@ -6,19 +6,23 @@ using System.Linq;
 namespace DeliveryApp.Data
 {
     public static class ContextSeed
-    {
-
+    {   
+        public enum Roles
+        {
+            SuperAdmin,
+            Basic
+        }
         public static async Task SeedRolesAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             //Seed Roles
-            await roleManager.CreateAsync(new IdentityRole("SuperAdmin"));
+            await roleManager.CreateAsync(new IdentityRole(Roles.SuperAdmin.ToString()));
 
         }
 
 
         public static async Task SeedSuperAdminAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
-            //Seed Default User
+            //Seed Default User superadmin
             var defaultUser = new ApplicationUser
             {
                 UserName = "superadmin",
@@ -28,6 +32,7 @@ namespace DeliveryApp.Data
                 EmailConfirmed = true,
                 PhoneNumberConfirmed = true,
             };
+            //Asignament Role to user
             if (userManager.Users.All(u => u.Id != defaultUser.Id))
             {
                 var user = await userManager.FindByEmailAsync(defaultUser.Email);
@@ -35,9 +40,8 @@ namespace DeliveryApp.Data
                 if (user == null)
                 {
                     await userManager.CreateAsync(defaultUser, "Contraseña23!");
-                    await userManager.AddToRoleAsync(defaultUser, "SuperAdmin");
+                    await userManager.AddToRoleAsync(defaultUser, Roles.SuperAdmin.ToString());
                     
-
                 }
 
             }

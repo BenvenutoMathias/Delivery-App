@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace DeliveryApp.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "SuperAdmin")]
     public class ProductsController : Controller
     {
         private ApplicationDbContext _context;

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using DeliveryApp.Models;
+@using DeliveryApp.Data;
+@inject SignInManager<ApplicationUser> SignInManager;
+@inject UserManager<ApplicationUser> UserManager;
+@using Microsoft.AspNetCore.Identity;
+
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -21,10 +27,17 @@
 
             <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
 
-            @if (User.Identity.IsAuthenticated)
-            {
+                @if(SignInManager.IsSignedIn(User))
+               {
+                ApplicationUser loggedUser = await UserManager.GetUserAsync(User);
+
+                if(await UserManager.IsInRoleAsync(loggedUser, "SuperAdmin"))
+                {
                 <a class="" asp-area="" asp-controller="Products" asp-action="Entry">Products</a>
-            }
+                }  
+                }
+                
+            
             <partial name="_LoginPartial" />
             <button class="" type="button">&equiv;</button>
 
