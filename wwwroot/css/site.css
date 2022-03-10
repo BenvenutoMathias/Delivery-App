@@ -1,26 +1,103 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿html{
+    scroll-behavior: smooth;
+}
+@import url('bootstrap.css');
+
+/* General Rules*/
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #333;
+    --fst: rgba(231, 13, 13, 0.747);
+    --snd: rgb(247, 99, 99);
+}
+
 body {
-    /*   background-color: rgba(231, 13, 13, 0.747);
- */
     background-color: rgba(231, 13, 13, 0.747);
 }
 
-header {
-    position: sticky;
+footer {
+    display: flex;
+    background-color: rgba(231, 13, 13, 0.747);
+    color: whitesmoke;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
-    header nav {
+body,
+h1,
+h2,
+h3,
+h4,
+header p,
+.menu {
+    margin: 0;
+}
+
+/* Responsive*/
+@media screen and (min-width: 360px) {
+
+    .categorias {
         display: flex;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 2.5rem;
-        text-decoration: none;
     }
 
-nav a {
+    .categorias ul {
+        justify-content: center;
+    }
+
+    /* .content {}
+
+    .content #Foods,
+    .content #Drinks,
+    .content #Breads {}
+
+    #Foods ul,
+    #Drinks ul,
+    #Breads ul {}
+
+    #Foods ul li,
+    #Drinks ul li,
+    #Breads ul li {}
+
+    #Foods li a,
+    #Drinks li a,
+    #Breads li a {} */
+}
+
+header {
+    background-color: rgba(231, 13, 13, 1);
+    background-image: linear-gradient(to right, var(--fst), var(--snd));
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 2.5rem;
+    text-decoration: none;
+}
+
+nav .logo {
+    font: 700 1.5rem 'Raleway', 'Calibri', sans-serif;
+}
+
+header ul {
+    padding: 0;
+}
+
+header li {
+    list-style: none;
+}
+
+nav a,
+header a {
     height: 100%;
     padding: .5rem;
 }
@@ -28,25 +105,49 @@ nav a {
 a,
 a:hover {
     color: aliceblue;
-}
-
-/* nav ul li{
-  color: aliceblue;
-  display: inline-block;
-  margin: 0 1rem;
-} */
-nav a:hover {
     text-decoration: none;
-    background-color: rgba(231, 13, 13, 0.747);
 }
 
-nav .logo {
-    font: 700 1.5rem 'Raleway', 'Calibri', sans-serif;
+.menu {
+    width: 100%;
+    max-height: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: all .5s linear;
+}
+
+.menu.active {
+    max-height: 640px;
+}
+
+.menu a {
+    display: block;
+    padding: .25rem;
+}
+
+.icon{
+    --color: transparent;
+    --position: center;
+    --size: 3rem;
+    --repeat: no-repeat;
+    display: block;
+    width: 3rem;
+    height: 3rem; 
+    border-radius: 1rem;
+}
+
+header .arrow-up {
+    position: fixed;
+    bottom: 5rem;
+    right: .5rem;
+    background-color: var(--dark);
+    opacity: .3;
 }
 
 /* -------------HEADER CATEGORIAS--------------*/
-.categorias {
-    box-sizing: border-box;
+.main {
+    display: flex;
+    flex-wrap: wrap;
     padding: min(20%, 15rem) 1rem;
     background-color: black;
     background-image: url('../assets/images/Background-Page/Portada\ Pizza.jpg');
@@ -56,88 +157,154 @@ nav .logo {
     background-attachment: fixed;
 }
 
-    .categorias .title {
-        flex-wrap: wrap;
-        width: 100%;
-        color: aliceblue;
-        text-align: center;
-    }
-
-    .categorias ul {
-        display: flex;
-        list-style: none;
-        text-decoration: none;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-        .categorias ul li {
-            padding: 1.5rem;
-            width: 20rem;
-        }
-
-    .categorias button {
-        background-color: rgba(231, 13, 13, 0.747);
-        border-radius: .5rem;
-        padding: 1.5rem;
-        width: 100%;
-        color: white;
-        border: none;
-    }
-
-        .categorias button:hover {
-            background-color: rgb(247, 99, 99);
-        }
-
-/*------------HEADER CATEGORIAS-----------------*/
-
-#Foods,
-#Drinks,
-#Breads {
-    display: none;
-    margin-top: 5rem;
+.categorias {
+    
+    justify-content: center;
+    display: flex;
     box-sizing: border-box;
-    text-align: justify;
-    height: 15rem;
-    width: 100%;
-    justify-content: space-between;
 }
 
-    #Foods a,
-    #Drinks a,
-    #Breads a {
-        box-sizing: border-box;
-        text-decoration: none;
-        height: 100%;
-        width: 100%;
-        margin: 0 1rem;
-        border: 1px solid black;
-        text-align: center;
-        color: aliceblue;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-    }
+.categorias ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    animation: appear 5s ease-in;
+}
 
-        #Foods a article h2,
-        #Drinks a article h2,
-        #Breads a article h2 {
-            margin: 6rem 0 0 0;
-            background-color: rgba(231, 13, 13, 0.747);
-        }
+.categorias ul li {
+    padding: 1.5rem;
+    width: 20rem;
+}
 
-    #Foods .Pizzas {
-        background-image: url('../assets/images/Categorias/PizzaCategoria.jpg');
-    }
+.categorias button {
+    background-color: rgba(231, 13, 13, 0.747);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    width: 100%;
+    color: white;
+    border: none;
+}
 
-    #Foods .Empanadas {
-        background-image: url('../assets/images/Categorias/EmpanadasCategoria.jpg');
-    }
+.categorias button:hover {
+    background-color: rgb(247, 99, 99);
+}
 
-    #Foods .Pastas {
-        background-image: url('../assets/images/Categorias/PastaCategoria.jpg');
-    }
+
+/* Delivery Sections */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+.content {
+    padding: 1rem;
+}
+
+.content #Foods,
+.content #Drinks,
+.content #Breads {
+    margin: 0;
+    max-width: 100%;
+    /* border: 1px solid black; */
+    /* text-align: justify; */
+    height: auto;
+    width: 100%;
+}
+
+#Foods ul,
+#Drinks ul,
+#Breads ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+}
+
+#Foods ul li,
+#Drinks ul li,
+#Breads ul li {
+    height: 16rem;
+    margin: 0.5rem;
+}
+
+#Foods li a,
+#Drinks li a,
+#Breads li a {
+    border-radius: .75rem;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    height: 100%;
+    text-align: center;
+    color: aliceblue;
+}
+
+/*   #Foods li a:hover,
+    #Drinks li a:hover,
+    #Breads li a:hover{
+        
+    } */
+
+.Pizzas,
+.Empanadas,
+.Pastas,
+.Wine,
+.Beer,
+.Soda,
+.Flan,
+.Brownie,
+.Helado {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Pizzas {
+    background-image: url('../assets/images/Categorias/PizzaCategoria.jpg');
+}
+
+.Empanadas {
+    background-image: url('../assets/images/Categorias/EmpanadasCategoria.jpg');
+}
+
+.Pastas {
+    background-image: url('../assets/images/Categorias/PastaCategoria.jpg');
+}
+
+.Wine {
+    background-image: url('../assets/images/Categorias/VinoDrinks.jpg');
+}
+
+.Beer {
+    background-image: url('../assets/images/Categorias/BeerDrinks.jpg');
+}
+
+.Soda {
+    background-image: url('../assets/images/Categorias/SodaDrinks.jpeg');
+}
+
+.Flan {
+    background-image: url('../assets/images/Categorias/flanBreads.jpg');
+}
+
+.Brownie {
+    background-image: url('../assets/images/Categorias/brownieBreads.jpg');
+}
+
+.Helado {
+    background-image: url('../assets/images/Categorias/HeladoBreads.jpg');
+}
 
 
 
@@ -147,23 +314,17 @@ nav .logo {
 #contact {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     max-width: 540px;
-    margin: auto;
+    margin: auto auto;
     border: 1px solid black;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
-#contact {
-    border: 1px solid black;
-    padding: 1rem;
+#contact button {
+    margin-top: 1rem;
+    background-color: rgba(231, 13, 13, 0.747);
+    display: block;
+    width: 100%;
+    border: none;
 }
-
-    #contact button {
-        margin-top: .5rem;
-        background-color: rgba(231, 13, 13, 0.747);
-        display: block;
-        width: 100%;
-        border: none;
-    }
-
-

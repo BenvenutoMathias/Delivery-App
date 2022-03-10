@@ -11,21 +11,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Delivery Fast Food</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
 </head>
 
 <body>
     <header>
+        <a href="#" class="icon arrow-up" title="volver al inicio"></a>
         <nav class="">
-
-
             <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">AppDeliveryFastFood</a>
-
-            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-
-
-            <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <button id="menu" class="btn btn-warning" type="button">&equiv;</button>
+        
+        </nav>
+            <ul class="menu">
+            <li><a class="" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+            
 
                 @if(SignInManager.IsSignedIn(User))
                {
@@ -33,26 +33,24 @@
 
                 if(await UserManager.IsInRoleAsync(loggedUser, "SuperAdmin"))
                 {
-                <a class="" asp-area="" asp-controller="Products" asp-action="Entry">Products</a>
+                <li><a class="" asp-area="" asp-controller="Products" asp-action="Entry">Products</a></li>
                 }  
                 }
                 
-            
             <partial name="_LoginPartial" />
-            <button class="" type="button">&equiv;</button>
-
-        </nav>
+            </ul>
     </header>
-    <div>
-        <main role="main" class="">
+    
+        @*  <main role="main" class="main">
             @RenderBody()
-        </main>
-    </div>
+        </main>*@
+        @RenderBody()
+    
 
     <footer class="">
-        <div class="">
+        
             &copy; 2022 - AppDeliveryFastFood - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+        
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
