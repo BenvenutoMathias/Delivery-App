@@ -1,0 +1,39 @@
+@media screen and (min-width: 340px) {
+
+    .categorias {
+        justify-content: center;
+    }
+
+    .categorias ul {
+        justify-content: center;
+    }
+
+    /* .content {}
+
+    .content #Foods,
+    .content #Drinks,
+    .content #Breads {}
+
+    #Foods ul,
+    #Drinks ul,
+    #Breads ul {}
+
+    #Foods ul li,
+    #Drinks ul li,
+    #Breads ul li {}
+
+    #Foods li a,
+    #Drinks li a,
+    #Breads li a {} */
+}
+
+@media screen and(min-width: 480px){
+    .categorias {
+        display: flex;
+    }
+
+    .categorias ul {
+        justify-content: center;
+    }
+
+}

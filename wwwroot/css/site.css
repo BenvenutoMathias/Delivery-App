@@ -1,7 +1,11 @@
-﻿html{
+﻿@import url('bootstrap.css');
+@import url('form.css');
+@import url('responsive.css');
+html {
     scroll-behavior: smooth;
+    font-family: sans-serif;
+    line-height: 1.15;
 }
-@import url('bootstrap.css');
 
 /* General Rules*/
 * {
@@ -37,35 +41,7 @@ header p,
     margin: 0;
 }
 
-/* Responsive*/
-@media screen and (min-width: 360px) {
 
-    .categorias {
-        display: flex;
-    }
-
-    .categorias ul {
-        justify-content: center;
-    }
-
-    /* .content {}
-
-    .content #Foods,
-    .content #Drinks,
-    .content #Breads {}
-
-    #Foods ul,
-    #Drinks ul,
-    #Breads ul {}
-
-    #Foods ul li,
-    #Drinks ul li,
-    #Breads ul li {}
-
-    #Foods li a,
-    #Drinks li a,
-    #Breads li a {} */
-}
 
 header {
     background-color: rgba(231, 13, 13, 1);
@@ -125,14 +101,14 @@ a:hover {
     padding: .25rem;
 }
 
-.icon{
+.icon {
     --color: transparent;
     --position: center;
     --size: 3rem;
     --repeat: no-repeat;
     display: block;
     width: 3rem;
-    height: 3rem; 
+    height: 3rem;
     border-radius: 1rem;
 }
 
@@ -140,6 +116,10 @@ header .arrow-up {
     position: fixed;
     bottom: 5rem;
     right: .5rem;
+    background-image: url('../icon/arrow-up.png');
+    background-size: 2rem;
+    background-position: center;
+    background-repeat: no-repeat; 
     background-color: var(--dark);
     opacity: .3;
 }
@@ -158,8 +138,6 @@ header .arrow-up {
 }
 
 .categorias {
-    
-    justify-content: center;
     display: flex;
     box-sizing: border-box;
 }
@@ -169,7 +147,6 @@ header .arrow-up {
     display: flex;
     list-style: none;
     text-decoration: none;
-    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
@@ -200,7 +177,6 @@ header .arrow-up {
 .content {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
 }
 
 .content {
@@ -212,8 +188,6 @@ header .arrow-up {
 .content #Breads {
     margin: 0;
     max-width: 100%;
-    /* border: 1px solid black; */
-    /* text-align: justify; */
     height: auto;
     width: 100%;
 }
@@ -250,11 +224,6 @@ header .arrow-up {
     color: aliceblue;
 }
 
-/*   #Foods li a:hover,
-    #Drinks li a:hover,
-    #Breads li a:hover{
-        
-    } */
 
 .Pizzas,
 .Empanadas,
@@ -310,21 +279,3 @@ header .arrow-up {
 
 
 
-/*          Form            */
-#contact {
-    display: flex;
-    justify-content: center;
-    max-width: 540px;
-    margin: auto auto;
-    border: 1px solid black;
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-
-#contact button {
-    margin-top: 1rem;
-    background-color: rgba(231, 13, 13, 0.747);
-    display: block;
-    width: 100%;
-    border: none;
-}

@@ -1,0 +1,17 @@
+#contact {
+    display: flex;
+    justify-content: center;
+    max-width: 540px;
+    margin: auto auto;
+    border: 1px solid black;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#contact button {
+    margin-top: 1rem;
+    background-color: rgba(231, 13, 13, 0.747);
+    display: block;
+    width: 100%;
+    border: none;
+}

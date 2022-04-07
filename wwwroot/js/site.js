@@ -35,3 +35,9 @@ menuBtn.onclick = () => {
     menuBtn.innerHTML = text;
 }
 
+/* let arrA = document.querySelectorAll('a');
+
+arrA.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log(e);
+}); */
