@@ -1,0 +1,29 @@
+﻿.loginBody{
+  padding:1rem;
+}
+
+.loginform{
+    height: 30rem;
+    margin:auto;
+    display:flex;
+}
+.loginform #account{
+    height:100%;
+    background-color: rgb(231,13,13);
+    display:flex;
+    flex-direction:column;
+    border-radius: .5rem;
+    padding:1rem;
+    width: 100%;
+}
+
+#account h4{
+    width: 100%;
+    text-align:center;
+}
+
+
+#account #subm {
+    width:40%;
+    margin: auto;
+}
