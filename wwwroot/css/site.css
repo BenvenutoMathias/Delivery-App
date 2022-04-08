@@ -1,6 +1,8 @@
 ﻿@import url('bootstrap.css');
 @import url('form.css');
 @import url('responsive.css');
+@import url('login.css');
+
 html {
     scroll-behavior: smooth;
     font-family: sans-serif;
@@ -10,6 +12,8 @@ html {
 /* General Rules*/
 * {
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root {
@@ -41,8 +45,6 @@ header p,
     margin: 0;
 }
 
-
-
 header {
     background-color: rgba(231, 13, 13, 1);
     background-image: linear-gradient(to right, var(--fst), var(--snd));
@@ -55,20 +57,19 @@ header nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
     height: 2.5rem;
     text-decoration: none;
 }
 
-nav .logo {
+header nav .logo {
     font: 700 1.5rem 'Raleway', 'Calibri', sans-serif;
 }
 
-header ul {
+header nav ul {
     padding: 0;
 }
 
-header li {
+header nav ul li {
     list-style: none;
 }
 
@@ -80,8 +81,8 @@ header a {
 
 a,
 a:hover {
-    color: aliceblue;
     text-decoration: none;
+    color: aliceblue;
 }
 
 .menu {
@@ -138,137 +139,88 @@ header .arrow-up {
 }
 
 .categorias {
+    width: 100%;
     display: flex;
     box-sizing: border-box;
 }
 
-.categorias ul {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    animation: appear 5s ease-in;
-}
+    .categorias ul {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        animation: appear 5s ease-in;
+    }
 
 .categorias ul li {
-    padding: 1.5rem;
+
     width: 20rem;
 }
 
-.categorias button {
+.categorias ul li a {
     background-color: rgba(231, 13, 13, 0.747);
     border-radius: .5rem;
     padding: 1.5rem;
     width: 100%;
     color: white;
     border: none;
+    text-align:center;
 }
 
-.categorias button:hover {
+.categorias a:hover {
     background-color: rgb(247, 99, 99);
 }
 
-
-/* Delivery Sections */
+/* Delivery Products */
 
 .content {
     display: flex;
-    flex-direction: column;
-}
-
-.content {
     padding: 1rem;
 }
 
 .content #Foods,
 .content #Drinks,
 .content #Breads {
-    margin: 0;
     max-width: 100%;
     height: auto;
-    width: 100%;
 }
 
-#Foods ul,
-#Drinks ul,
-#Breads ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-
-}
-
-#Foods ul li,
-#Drinks ul li,
-#Breads ul li {
-    height: 16rem;
-    margin: 0.5rem;
-}
-
-#Foods li a,
-#Drinks li a,
-#Breads li a {
+#Foods a,
+#Drinks a,
+#Breads a {
     border-radius: .75rem;
     display: inline-block;
     width: 100%;
     text-decoration: none;
-    height: 100%;
+    height: 10rem;
     text-align: center;
     color: aliceblue;
 }
-
-
-.Pizzas,
+.content a h4 {
+    border-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.content a h4:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+/*Images*/
 .Empanadas,
-.Pastas,
-.Wine,
 .Beer,
-.Soda,
-.Flan,
-.Brownie,
 .Helado {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.Pizzas {
-    background-image: url('../assets/images/Categorias/PizzaCategoria.jpg');
-}
-
 .Empanadas {
     background-image: url('../assets/images/Categorias/EmpanadasCategoria.jpg');
 }
 
-.Pastas {
-    background-image: url('../assets/images/Categorias/PastaCategoria.jpg');
-}
-
-.Wine {
-    background-image: url('../assets/images/Categorias/VinoDrinks.jpg');
-}
-
 .Beer {
     background-image: url('../assets/images/Categorias/BeerDrinks.jpg');
-}
-
-.Soda {
-    background-image: url('../assets/images/Categorias/SodaDrinks.jpeg');
-}
-
-.Flan {
-    background-image: url('../assets/images/Categorias/flanBreads.jpg');
-}
-
-.Brownie {
-    background-image: url('../assets/images/Categorias/brownieBreads.jpg');
 }
 
 .Helado {

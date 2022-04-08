@@ -1,39 +1,114 @@
-@media screen and (min-width: 340px) {
-
-    .categorias {
-        justify-content: center;
+@media screen and (max-width: 319px) {
+    header nav {
+        justify-content: space-evenly;
     }
-
     .categorias ul {
-        justify-content: center;
+        flex-wrap: wrap;
     }
-
-    /* .content {}
-
-    .content #Foods,
-    .content #Drinks,
-    .content #Breads {}
-
-    #Foods ul,
-    #Drinks ul,
-    #Breads ul {}
-
-    #Foods ul li,
-    #Drinks ul li,
-    #Breads ul li {}
-
-    #Foods li a,
-    #Drinks li a,
-    #Breads li a {} */
+        .categorias ul li {
+            padding: .5rem;
+        }
 }
 
-@media screen and(min-width: 480px){
+@media screen and (min-width: 320px) {
+    header nav {
+        justify-content: space-evenly;
+    }
     .categorias {
         display: flex;
-    }
-
-    .categorias ul {
         justify-content: center;
     }
 
+        .categorias ul {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+            .categorias ul li {
+                width: 20rem;
+                padding: .5rem;
+            }
+
+    .content {
+        flex-direction: column;
+    }
+
+        .content #Foods,
+        .content #Drinks,
+        .content #Breads {
+            margin: 1rem 0;
+        }
+    /*LogIn*/
+    .loginform {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 480px) {
+        header nav {
+            justify-content: space-evenly;
+        }
+        .categorias {
+            display: flex;
+            justify-content: center;
+        }
+
+            .categorias ul {
+                justify-content: center;
+                flex-wrap: nowrap;
+            }
+
+                .categorias ul li {
+                    width: 20rem;
+                    padding: .5rem;
+                }
+
+        .content {
+            flex-direction: column;
+        }
+
+            .content #Foods,
+            .content #Drinks,
+            .content #Breads {
+                margin: 1rem 0;
+            }
+
+        /*LogIn*/
+        .loginform{
+            width:25rem;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        header nav{
+            justify-content: space-between
+        }
+        
+        .categorias {
+            display: flex;
+        }
+
+            .categorias ul {
+                justify-content: space-evenly;
+                flex-wrap: nowrap;
+            }
+
+                .categorias ul li {
+                    width: 10rem;
+                }
+
+        .content {
+            flex-direction: row;
+        }
+
+        .content #Foods,
+        .content #Drinks,
+        .content #Breads {
+             margin: .5rem .5rem;
+             width: 33%;
+        }
+        /*LogIn*/
+        .loginform {
+            width: 25rem;
+        }
+    }
 }
