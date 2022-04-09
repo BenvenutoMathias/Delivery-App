@@ -8,6 +8,7 @@
     display:flex;
 }
 .loginform #account{
+    color: aliceblue;
     height:100%;
     background-color: rgb(231,13,13);
     display:flex;

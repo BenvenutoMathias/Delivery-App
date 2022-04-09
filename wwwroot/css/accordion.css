@@ -1,0 +1,28 @@
+/* Accordion Desplegable Index */
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    margin-top: 1rem;
+    border-radius: .25rem;
+    padding: 0 18px;
+    background-color: rgba(255, 255, 255,0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .panel p {
+      margin-bottom: 0;
+  }

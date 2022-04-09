@@ -1,15 +1,16 @@
 ﻿@import url('bootstrap.css');
-@import url('form.css');
+@import url('productsform.css');
 @import url('responsive.css');
 @import url('login.css');
+@import url('accordion.css');
 
+
+/* General Rules*/
 html {
     scroll-behavior: smooth;
     font-family: sans-serif;
     line-height: 1.15;
 }
-
-/* General Rules*/
 * {
     box-sizing: border-box;
     list-style: none;
@@ -125,7 +126,7 @@ header .arrow-up {
     opacity: .3;
 }
 
-/* -------------HEADER CATEGORIAS--------------*/
+/*          Header Categorias       */
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -182,7 +183,6 @@ header .arrow-up {
 .content #Drinks,
 .content #Breads {
     max-width: 100%;
-    height: auto;
 }
 
 #Foods a,
@@ -206,7 +206,9 @@ header .arrow-up {
 .content a h4:hover{
     background-color: rgba(0,0,0,0.5);
 }
-/*Images*/
+
+
+/*              Images              */
 .Empanadas,
 .Beer,
 .Helado {
@@ -226,8 +228,6 @@ header .arrow-up {
 .Helado {
     background-image: url('../assets/images/Categorias/HeladoBreads.jpg');
 }
-
-
 
 
 
