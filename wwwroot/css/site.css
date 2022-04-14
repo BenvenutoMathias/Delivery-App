@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@import './form.css';
 @import './responsive.css';
 
@@ -6,10 +7,25 @@ html{
     scroll-behavior: smooth;
 }
 @import url('bootstrap.css');
+=======
+﻿@import url('bootstrap.css');
+@import url('productsform.css');
+@import url('responsive.css');
+@import url('login.css');
+@import url('accordion.css');
+
+>>>>>>> develop
 
 /* General Rules*/
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    line-height: 1.15;
+}
 * {
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root {
@@ -41,36 +57,6 @@ header p,
     margin: 0;
 }
 
-/* Responsive*/
-@media screen and (min-width: 360px) {
-
-    .categorias {
-        display: flex;
-    }
-
-    .categorias ul {
-        justify-content: center;
-    }
-
-    /* .content {}
-
-    .content #Foods,
-    .content #Drinks,
-    .content #Breads {}
-
-    #Foods ul,
-    #Drinks ul,
-    #Breads ul {}
-
-    #Foods ul li,
-    #Drinks ul li,
-    #Breads ul li {}
-
-    #Foods li a,
-    #Drinks li a,
-    #Breads li a {} */
-}
-
 header {
     background-color: rgba(231, 13, 13, 1);
     background-image: linear-gradient(to right, var(--fst), var(--snd));
@@ -83,20 +69,19 @@ header nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
     height: 2.5rem;
     text-decoration: none;
 }
 
-nav .logo {
+header nav .logo {
     font: 700 1.5rem 'Raleway', 'Calibri', sans-serif;
 }
 
-header ul {
+header nav ul {
     padding: 0;
 }
 
-header li {
+header nav ul li {
     list-style: none;
 }
 
@@ -108,8 +93,8 @@ header a {
 
 a,
 a:hover {
-    color: aliceblue;
     text-decoration: none;
+    color: aliceblue;
 }
 
 .menu {
@@ -129,14 +114,14 @@ a:hover {
     padding: .25rem;
 }
 
-.icon{
+.icon {
     --color: transparent;
     --position: center;
     --size: 3rem;
     --repeat: no-repeat;
     display: block;
     width: 3rem;
-    height: 3rem; 
+    height: 3rem;
     border-radius: 1rem;
 }
 
@@ -144,11 +129,15 @@ header .arrow-up {
     position: fixed;
     bottom: 5rem;
     right: .5rem;
+    background-image: url('../icon/arrow-up.png');
+    background-size: 2rem;
+    background-position: center;
+    background-repeat: no-repeat; 
     background-color: var(--dark);
     opacity: .3;
 }
 
-/* -------------HEADER CATEGORIAS--------------*/
+/*          Header Categorias       */
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -162,148 +151,89 @@ header .arrow-up {
 }
 
 .categorias {
-    
-    justify-content: center;
+    width: 100%;
     display: flex;
     box-sizing: border-box;
 }
 
-.categorias ul {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    animation: appear 5s ease-in;
-}
+    .categorias ul {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        animation: appear 5s ease-in;
+    }
 
 .categorias ul li {
-    padding: 1.5rem;
+
     width: 20rem;
 }
 
-.categorias button {
+.categorias ul li a {
     background-color: rgba(231, 13, 13, 0.747);
     border-radius: .5rem;
     padding: 1.5rem;
     width: 100%;
     color: white;
     border: none;
+    text-align:center;
 }
 
-.categorias button:hover {
+.categorias a:hover {
     background-color: rgb(247, 99, 99);
 }
 
-
-/* Delivery Sections */
+/* Delivery Products */
 
 .content {
     display: flex;
-    flex-direction: column;
-    /* border: 1px solid black; */
-}
-
-.content {
     padding: 1rem;
 }
 
 .content #Foods,
 .content #Drinks,
 .content #Breads {
-    margin: 0;
     max-width: 100%;
-    /* border: 1px solid black; */
-    /* text-align: justify; */
-    height: auto;
-    width: 100%;
 }
 
-#Foods ul,
-#Drinks ul,
-#Breads ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-
-}
-
-#Foods ul li,
-#Drinks ul li,
-#Breads ul li {
-    height: 16rem;
-    margin: 0.5rem;
-}
-
-#Foods li a,
-#Drinks li a,
-#Breads li a {
+#Foods a,
+#Drinks a,
+#Breads a {
     border-radius: .75rem;
     display: inline-block;
     width: 100%;
     text-decoration: none;
-    height: 100%;
+    height: 10rem;
     text-align: center;
     color: aliceblue;
 }
+.content a h4 {
+    border-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.content a h4:hover{
+    background-color: rgba(0,0,0,0.5);
+}
 
-/*   #Foods li a:hover,
-    #Drinks li a:hover,
-    #Breads li a:hover{
-        
-    } */
 
-.Pizzas,
+/*              Images              */
 .Empanadas,
-.Pastas,
-.Wine,
 .Beer,
-.Soda,
-.Flan,
-.Brownie,
 .Helado {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.Pizzas {
-    background-image: url('../assets/images/Categorias/PizzaCategoria.jpg');
-}
-
 .Empanadas {
     background-image: url('../assets/images/Categorias/EmpanadasCategoria.jpg');
 }
 
-.Pastas {
-    background-image: url('../assets/images/Categorias/PastaCategoria.jpg');
-}
-
-.Wine {
-    background-image: url('../assets/images/Categorias/VinoDrinks.jpg');
-}
-
 .Beer {
     background-image: url('../assets/images/Categorias/BeerDrinks.jpg');
-}
-
-.Soda {
-    background-image: url('../assets/images/Categorias/SodaDrinks.jpeg');
-}
-
-.Flan {
-    background-image: url('../assets/images/Categorias/flanBreads.jpg');
-}
-
-.Brownie {
-    background-image: url('../assets/images/Categorias/brownieBreads.jpg');
 }
 
 .Helado {
@@ -312,23 +242,3 @@ header .arrow-up {
 
 
 
-
-
-/*          Form            */
-#contact {
-    display: flex;
-    justify-content: center;
-    max-width: 540px;
-    margin: auto auto;
-    border: 1px solid black;
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-
-#contact button {
-    margin-top: 1rem;
-    background-color: rgba(231, 13, 13, 0.747);
-    display: block;
-    width: 100%;
-    border: none;
-}
