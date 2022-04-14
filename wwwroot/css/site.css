@@ -1,4 +1,8 @@
-﻿html{
+﻿@import './form.css';
+@import './responsive.css';
+
+
+html{
     scroll-behavior: smooth;
 }
 @import url('bootstrap.css');

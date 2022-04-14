@@ -1,0 +1,22 @@
+@media screen and (min-width: 340px) {
+
+    .categorias {
+        justify-content: center;
+    }
+
+    .categorias ul {
+        justify-content: center;
+    }
+
+}
+
+@media screen and(min-width: 480px){
+    .categorias {
+        display: flex;
+    }
+
+    .categorias ul {
+        justify-content: center;
+    }
+
+}
