@@ -1,87 +1,169 @@
-﻿@{
-        ViewData["Title"] = "Delivery Fast Food";
+<<<<<<< HEAD
+﻿@model Product
+@{
+    ViewData["Title"] = "Delivery Fast Food";
 }
 <main class="main">
-        <div class="categorias">
+    <div class="categorias">
+        <ul>
+            <li class="categor"><a id="aFood" href="#Foods"><button>Comidas</button></a></li>
+            <li class="categor"><a href="#Drinks" id="aDrink"><button>Bebidas</button></a></li>
+            <li class="categor"><a href="#Breads" id="aBread"><button>Postres</button></a></li>
+        </ul>
+    </div>
+=======
+﻿@{
+    ViewData["Title"] = "Delivery Fast Food";
+}
+<main class="main">
 
-                <ul>
-                        <li class="categor"><a id="aFood" href="#Foods"><button>Comidas</button></a></li>
+    <div class="categorias">
 
-                        <li class="categor"><a href="#Drinks" id="aDrink"><button>Bebidas</button></a></li>
+        <ul>
+            <li class="categorias"><a id="aPromo" type="button" href="#Foods">Promociones</a></li>
 
-                        <li class="categor"><a href="#Breads" id="aBread"><button>Postres</button></a></li>
+            <li class="categorias"><a href="#Drinks" id="aDia">Plato del dia</a></li>
 
-                </ul>
+            <li class="categorias"><a href="#Breads" id="aDes">Descuentos</a></li>
+        </ul>
 
-        </div>
+    </div>
 
+>>>>>>> develop
 </main>
 
-
-
 <div class="content">
-        <section id="Foods">
+<<<<<<< HEAD
+    <section id="Foods">
 
-                <ul>
-                        <li><a href="" class="Pizzas">
-                                        <h2>Pizzas</h2>
-                                </a></li>
+        <ul>
+            <li>
+                <a href="" class="Pizzas">
+                    <h2>Pizzas</h2>
+                    @foreach (var item in @ViewBag.FoodsList)
+                    {
+                      <p>@item.FoodName</p>
+                    }
+                </a>
+            </li>
+=======
 
+    <section id="Foods">
+        <a href="" class="Empanadas dropdwn accordion">
+            <h4>Comidas </h4>
+            <span class="sign"></span>
+        </a>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, aperiam adipisci. Commodi laborum molestias assumenda placeat nobis, dolores cupiditate odio ipsum perspiciatis dolore architecto ex. Provident voluptas repudiandae necessitatibus exercitationem.</p>
+            </div>
+    </section>
+>>>>>>> develop
 
+    <section id="Drinks">
+        <a href="" class="Beer dropdwn accordion">
+            <h4>Bebidas</h4>
+        </a>
+        <div class="panel">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, aperiam adipisci. Commodi laborum molestias assumenda placeat nobis, dolores cupiditate odio ipsum perspiciatis dolore architecto ex. Provident voluptas repudiandae necessitatibus exercitationem.</p>
+            </div>
+    </section>
 
-                        <li><a href="" class="Empanadas">
-                                        <h2>Empanadas</h2>
-                                </a></li>
+    <section id="Breads">
+        <a href="" class="Helado dropdwn accordion">
+            <h4>Postres</h4>
+        </a>
+        <div class="panel">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, aperiam adipisci. Commodi laborum molestias assumenda placeat nobis, dolores cupiditate odio ipsum perspiciatis dolore architecto ex. Provident voluptas repudiandae necessitatibus exercitationem.</p>
+            </div>
+    </section>
 
-
-
-                        <li><a href="" class="Pastas">
-                                        <h2>Pastas</h2>
-                                </a></li>
-                </ul>
-
-        </section>
-
-
-        <section id="Drinks">
-
-                <ul>
-                        <li><a href="" class="Wine">
-                                        <h2>Vinos</h2>
-                                </a></li>
-
-
-
-                        <li><a href="" class="Beer">
-                                        <h2>Cervezas</h2>
-                                </a></li>
-
-
-
-                        <li><a href="" class="Soda">
-                                        <h2>Gaseosas</h2>
-                                </a></li>
-                </ul>
-
-        </section>
-
-        <section id="Breads">
-                <ul>
-                        <li><a href="" class="Flan">
-                                        <h2>Flan</h2>
-                                </a></li>
-
-
-
-                        <li><a href="" class="Brownie">
-                                        <h2>Brownie</h2>
-                                </a></li>
+<<<<<<< HEAD
+            <li>
+                <a href="" class="Empanadas">
+                    <h2>Empanadas</h2>
+                </a>
+            </li>
 
 
 
-                        <li><a href="" class="Helado">
-                                        <h2>Helado</h2>
-                                </a></li>
-                </ul>
-        </section>
+            <li>
+                <a href="" class="Pastas">
+                    <h2>Pastas</h2>
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+
+    <section id="Drinks">
+
+        <ul>
+            <li>
+                <a href="" class="Wine">
+                    <h2>Vinos</h2>
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="" class="Beer">
+                    <h2>Cervezas</h2>
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="" class="Soda">
+                    <h2>Gaseosas</h2>
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+    <section id="Breads">
+        <ul>
+            <li>
+                <a href="" class="Flan">
+                    <h2>Flan</h2>
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="" class="Brownie">
+                    <h2>Brownie</h2>
+                </a>
+            </li>
+
+
+
+            <li>
+                <a href="" class="Helado">
+                    <h2>Helado</h2>
+                </a>
+            </li>
+        </ul>
+    </section>
+=======
+>>>>>>> develop
 </div>
+
+@* <button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div> *@

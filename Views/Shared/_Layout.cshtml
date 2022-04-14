@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <a href="#" class="icon arrow-up" title="volver al inicio"></a>
+        <a href="#" class="icon arrow-up" title="Volver al inicio"></a>
         <nav class="">
             <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">AppDeliveryFastFood</a>
             <button id="menu" class="btn btn-warning" type="button">&equiv;</button>
@@ -46,7 +46,6 @@
         </main>*@
         @RenderBody()
     
-
     <footer class="">
         
             &copy; 2022 - AppDeliveryFastFood - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -55,6 +54,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/accordion.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
