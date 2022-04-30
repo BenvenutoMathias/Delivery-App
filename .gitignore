@@ -1,4 +1,5 @@
 obj/
+.vs/
 bin/
 appsettings.json
 DeliveryApp.sublime-workspace
