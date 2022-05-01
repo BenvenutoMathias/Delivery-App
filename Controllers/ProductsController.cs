@@ -26,6 +26,10 @@ namespace DeliveryApp.Controllers
         {
             return View();
         }
+        public ActionResult ShoppingCart()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult EntryData(Product product, string type, string foodname, string price, int quantity, string description)

@@ -1,4 +1,7 @@
 obj/
+.vs/
+bin/
 appsettings.json
 DeliveryApp.sublime-workspace
 comandosgit.txt
+.gitignore
